@@ -18,25 +18,17 @@
             "menu": "footer"
           }
         },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
         "footer-2": {
           "type": "text",
           "settings": {
             "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "subtext": "<p>At Totaga, we envision a future where living spaces are not just smart but are also secure and private. Our mission is to empower homeowners with innovative technology, enhancing everyday life while upholding the privacy and security every individual deserves. We offer a handpicked selection of smart home technology, tailored for the DIY enthusiast, the privacy-conscious, and all those in between.<\/p>"
           }
         }
       },
       "block_order": [
         "brand_information_MCBhwz",
         "footer-0",
-        "footer-1",
         "footer-2"
       ],
       "settings": {
