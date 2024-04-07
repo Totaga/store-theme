@@ -5,6 +5,12 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "brand_information_MCBhwz": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -28,6 +34,7 @@
         }
       },
       "block_order": [
+        "brand_information_MCBhwz",
         "footer-0",
         "footer-1",
         "footer-2"
@@ -36,6 +43,7 @@
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
