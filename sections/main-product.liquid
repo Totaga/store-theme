@@ -184,6 +184,12 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
+              {%- when 'description' -%}
+                {%- if product.description != blank -%}
+                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                    {{ product.description }}
+                  </div>
+                {%- endif -%}
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -636,11 +642,6 @@
             {% render 'icon-arrow' %}
           </a>
         </product-info>
-        {%- if product.description != blank -%}
-          <div class="product__description rte quick-add-hidden">
-            {{ product.description }}
-          </div>
-        {%- endif -%}
       </div>
     </div>
 
