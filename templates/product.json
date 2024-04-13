@@ -71,7 +71,7 @@
           "settings": {
             "heading": "Integrations",
             "icon": "lightning_bolt",
-            "content": "",
+            "content": "{{ product.metafields.custom.ecosystems | metafield_tag: field: 'name' }}",
             "page": ""
           }
         }
