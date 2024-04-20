@@ -71,14 +71,15 @@
           "settings": {
             "heading": "Integrations",
             "icon": "lightning_bolt",
-            "content": "{{ product.metafields.custom.ecosystems | metafield_tag: field: 'name' }}",
+            "content": "{{ product.metafields.custom.ecosystems | metafield_tag: field: 'name' }}<p><\/p>",
             "page": ""
           }
         },
         "custom_liquid_fmcMYf": {
           "type": "custom_liquid",
+          "repeater": "{{ product.metafields.custom.ecosystems.value }}",
           "settings": {
-            "custom_liquid": "<div class=\"product-ecosystems\">\n  {% assign ecosystems = product.metafields.custom.ecosystem | json_parse %}\n  <ul style=\"display: flex; list-style: none; padding: 0;\">\n    {% for ecosystem in ecosystems %}\n      {% if ecosystem.icon and ecosystem.url %}\n        <li style=\"margin-right: 10px;\">\n          <a href=\"{{ ecosystem.url }}\" target=\"_blank\" aria-label=\"Ecosystem Link\">\n            <img src=\"{{ ecosystem.icon | img_url: 'original' }}\" alt=\"Ecosystem Icon\" style=\"height: 30px; width: auto;\">\n          <\/a>\n        <\/li>\n      {% endif %}\n    {% endfor %}\n  <\/ul>\n<\/div>"
+            "custom_liquid": "<div class=\"product-ecosystems\">\n  {% assign ecosystems = product.metafields.custom.ecosystems | json_parse %}\n  <ul style=\"display: flex; list-style: none; padding: 0;\">\n    {% for ecosystem in ecosystems %}\n      {% if ecosystem.icon and ecosystem.url %}\n        <li style=\"margin-right: 10px;\">\n          <a href=\"{{ ecosystem.url }}\" target=\"_blank\" aria-label=\"Ecosystem Link\">\n            <img src=\"{{ ecosystem.icon | img_url: 'original' }}\" alt=\"Ecosystem Icon\" style=\"height: 30px; width: auto;\">\n          <\/a>\n        <\/li>\n      {% endif %}\n    {% endfor %}\n  <\/ul>\n<\/div>"
           }
         }
       },
