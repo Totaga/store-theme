@@ -55,6 +55,12 @@
             "page": ""
           }
         },
+        "custom_liquid_bxfykh": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-ecosystems\">\n  {% assign ecosystems = product.metafields.custom.ecosystems | json_parse %}\n  <ul style=\"display: flex; list-style: none; padding: 0;\">\n    {% for ecosystem in ecosystems %}\n      {% if ecosystem.icon and ecosystem.website %}\n        <li style=\"margin-right: 10px;\">\n          <a href=\"{{ ecosystem.website }}\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Ecosystem Link\">\n            <img src=\"{{ ecosystem.icon }}\" alt=\"Ecosystem Icon\" style=\"height: 30px; width: auto;\">\n          <\/a>\n        <\/li>\n      {% endif %}\n    {% endfor %}\n  <\/ul>\n<\/div>\n\n<style>\n.product-ecosystems ul {\n  display: flex;\n  list-style: none;\n  padding: 0;\n}\n\n.product-ecosystems li {\n  margin-right: 10px;\n}\n\n.product-ecosystems img {\n  height: 30px;\n  width: auto;\n}\n<\/style>"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -74,12 +80,6 @@
             "content": "{{ product.metafields.custom.ecosystems | metafield_tag: field: 'name' }}<p><\/p>",
             "page": ""
           }
-        },
-        "custom_liquid_fmcMYf": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"product-ecosystems\">\n  {% assign ecosystems = product.metafields.custom.ecosystems | json_parse %}\n  <ul style=\"display: flex; list-style: none; padding: 0;\">\n    {% for ecosystem in ecosystems %}\n      {% if ecosystem.icon and ecosystem.website %}\n        <li style=\"margin-right: 10px;\">\n          <a href=\"{{ ecosystem.website }}\" target=\"_blank\" aria-label=\"Ecosystem Link\">\n            <img src=\"{{ ecosystem.icon | img_url: 'original' }}\" alt=\"Ecosystem Icon\" style=\"height: 30px; width: auto;\">\n          <\/a>\n        <\/li>\n      {% endif %}\n    {% endfor %}\n  <\/ul>\n<\/div>"
-          }
         }
       },
       "block_order": [
@@ -91,10 +91,10 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-1",
+        "custom_liquid_bxfykh",
         "share",
         "description",
-        "collapsible_tab_BU9it8",
-        "custom_liquid_fmcMYf"
+        "collapsible_tab_BU9it8"
       ],
       "settings": {
         "enable_sticky_info": true,
