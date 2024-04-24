@@ -55,6 +55,11 @@
             "page": ""
           }
         },
+        "judge_me_reviews_preview_badge_J3NTGC": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "custom_liquid_bxfykh": {
           "type": "custom_liquid",
           "settings": {
@@ -91,6 +96,7 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-1",
+        "judge_me_reviews_preview_badge_J3NTGC",
         "custom_liquid_bxfykh",
         "share",
         "description",
