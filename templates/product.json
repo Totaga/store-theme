@@ -64,7 +64,7 @@
         "custom_liquid_VcAAC6": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.ecosystems.value %}\n  <div class=\"product-ecosystems\">\n    <ul>\n      {% assign ecosystems = product.metafields.custom.ecosystems.value | json_parse %}\n      {% for ecosystem in ecosystems %}\n        <li>\n          <div class=\"ecosystem\">{{ ecosystem.name }}\n          {% if ecosystem.icon%}\n            {{ ecosystem.icon | img_tag }}\n          {% endif %}\n          <\/div>\n        <\/li>\n      {% endfor %}\n    <\/ul>\n  <\/div>\n{% endif %}"
+            "custom_liquid": "{% if product.metafields.custom.ecosystems.value %}\n  <div class=\"product-ecosystems\">\n    <ul>\n      {% assign ecosystems = product.metafields.custom.ecosystems.value | json_parse %}\n      {% for ecosystem in ecosystems %}\n        <li>\n          <div class=\"ecosystem\">\n          {% if ecosystem.icon%}\n            {{ ecosystem.icon | img_tag }}\n          {% endif %}\n          {{ ecosystem.name }}\n          <\/div>\n        <\/li>\n      {% endfor %}\n    <\/ul>\n  <\/div>\n{% endif %}"
           }
         },
         "share": {
