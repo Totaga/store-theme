@@ -82,6 +82,7 @@ iconify-icon {
 .ecosystems ul {
   list-style-type: none; /* Removes default list styling */
   padding: 0;
+  margin-top: 0;
 }
 
 .ecosystem img {
@@ -112,6 +113,7 @@ iconify-icon {
 .sensors ul {
   list-style-type: none; /* Removes default list styling */
   padding: 0;
+  margin-top: 0;
 }
 
 /* base */
