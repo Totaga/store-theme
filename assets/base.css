@@ -79,6 +79,26 @@ iconify-icon {
     height: 1em;
 }
 
+.product-ecosystems ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0;
+}
+
+.product-ecosystems li {
+  margin-bottom: 10px; /* Space between items */
+}
+
+.product-ecosystems img {
+  height: 30px; /* Fixed height for all icons */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.ecosystem-name {
+  display: inline-block; /* Align name with icon */
+  vertical-align: middle; /* Align text middle to the icon */
+}
+
 /* base */
 
 .page-width {
