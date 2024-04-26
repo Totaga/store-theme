@@ -55,21 +55,12 @@
         "custom_liquid_VcAAC6": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.ecosystems.value %}\n  <div class=\"product-ecosystems\">\n    <ul>\n      {% assign ecosystems = product.metafields.custom.ecosystems.value | json_parse %}\n      {% for ecosystem in ecosystems %}\n        <li>\n          <div class=\"ecosystem\">\n          {% if ecosystem.icon%}\n            {{ ecosystem.icon | img_tag }}\n          {% endif %}\n          {{ ecosystem.name }}\n          <\/div>\n        <\/li>\n      {% endfor %}\n    <\/ul>\n  <\/div>\n{% endif %}"
+            "custom_liquid": "{% if product.metafields.custom.ecosystems.value %}\n  <div class=\"product-ecosystems\">\n    <ul>\n      {% assign ecosystems = product.metafields.custom.ecosystems.value | json_parse %}\n      {% for ecosystem in ecosystems %}\n        <li>\n          <div class=\"ecosystem\">\n          {% if ecosystem.icon%}\n            {{ ecosystem.icon | img_tag }}\n          {% endif %}\n          <a href=\"{{ ecosystem.page }}\" target=\"_blank\">{{ ecosystem.name }}<\/a>\n          <\/div>\n        <\/li>\n      {% endfor %}\n    <\/ul>\n  <\/div>\n{% endif %}"
           }
         },
         "description": {
           "type": "description",
           "settings": {
-          }
-        },
-        "collapsible_tab_BU9it8": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Ecosystems",
-            "icon": "lightning_bolt",
-            "content": "{{ product.metafields.custom.ecosystems | metafield_tag: field: 'name' }}<p><\/p>",
-            "page": ""
           }
         }
       },
@@ -83,8 +74,7 @@
         "buy_buttons",
         "custom_liquid_bxfykh",
         "custom_liquid_VcAAC6",
-        "description",
-        "collapsible_tab_BU9it8"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
