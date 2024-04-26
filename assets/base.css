@@ -99,6 +99,21 @@ iconify-icon {
   align-items: center; /* Align items vertically */
 }
 
+.sensor {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Align items vertically */
+}
+
+.sensor a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.sensors ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0;
+}
+
 /* base */
 
 .page-width {
