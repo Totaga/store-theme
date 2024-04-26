@@ -88,13 +88,13 @@ iconify-icon {
   margin-bottom: 10px; /* Space between items */
 }
 
-.product-ecosystems img {
+.ecosystem img {
   height: 1em; /* Fixed height for all icons */
   width: auto; /* Maintain aspect ratio */
   margin-right: 5px; /* Space between icon and text */
 }
 
-.ecosystem-name {
+.ecosystem {
   display: inline-block; /* Align name with icon */
   vertical-align: middle; /* Align text middle to the icon */
 }
