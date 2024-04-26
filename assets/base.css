@@ -89,7 +89,7 @@ iconify-icon {
 }
 
 .product-ecosystems img {
-  height: 30px; /* Fixed height for all icons */
+  height: 1em; /* Fixed height for all icons */
   width: auto; /* Maintain aspect ratio */
   margin-right: 5px; /* Space between icon and text */
 }
