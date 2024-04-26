@@ -58,7 +58,7 @@
         "custom_liquid_bxfykh": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"product-ecosystems\">\n  {% assign ecosystems = product.metafields.custom.ecosystems | json_parse %}\n  <ul style=\"display: flex; list-style: none; padding: 0;\">\n    {% for ecosystem in ecosystems %}ecosystem.name\n      {% if ecosystem.icon and ecosystem.website %}\n        <li style=\"margin-right: 10px;\">\n          <a href=\"{{ ecosystem.website }}\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Ecosystem Link\">\n            <img src=\"{{ ecosystem.icon }}\" alt=\"Ecosystem Icon\" style=\"height: 30px; width: auto;\">\n          <\/a>\n        <\/li>\n      {% endif %}\n    {% endfor %}\n  <\/ul>\n<\/div>\n\n<style>\n.product-ecosystems ul {\n  display: flex;\n  list-style: none;\n  padding: 0;\n}\n\n.product-ecosystems li {\n  margin-right: 10px;\n}\n\n.product-ecosystems img {\n  height: 30px;\n  width: auto;\n}\n<\/style>"
+            "custom_liquid": "{% if product.metafields.custom.device_type %}\n  <div class=\"product-device-type\">\n    <span>Device Type: {{ product.metafields.custom.device_type.value.name }}<\/span>\n    {% if product.metafields.custom.device_type.value.icon %}\n      <span class=\"iconify\" data-icon=\"mdi:{{ product.metafields.custom.device_type.value.icon }}\" data-inline=\"false\"><\/span>\n    {% endif %}\n  <\/div>\n{% endif %}"
           }
         },
         "share": {
