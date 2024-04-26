@@ -84,10 +84,6 @@ iconify-icon {
   padding: 0;
 }
 
-.product-ecosystems li {
-  margin-bottom: 10px; /* Space between items */
-}
-
 .ecosystem img {
   height: 1em; /* Fixed height for all icons */
   width: auto; /* Maintain aspect ratio */
