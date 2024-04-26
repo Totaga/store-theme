@@ -42,17 +42,8 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
           }
         },
         "custom_liquid_bxfykh": {
@@ -65,12 +56,6 @@
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "{% if product.metafields.custom.ecosystems.value %}\n  <div class=\"product-ecosystems\">\n    <ul>\n      {% assign ecosystems = product.metafields.custom.ecosystems.value | json_parse %}\n      {% for ecosystem in ecosystems %}\n        <li>\n          <div class=\"ecosystem\">\n          {% if ecosystem.icon%}\n            {{ ecosystem.icon | img_tag }}\n          {% endif %}\n          {{ ecosystem.name }}\n          <\/div>\n        <\/li>\n      {% endfor %}\n    <\/ul>\n  <\/div>\n{% endif %}"
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         },
         "description": {
@@ -96,10 +81,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "collapsible-row-1",
         "custom_liquid_bxfykh",
         "custom_liquid_VcAAC6",
-        "share",
         "description",
         "collapsible_tab_BU9it8"
       ],
