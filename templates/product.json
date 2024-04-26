@@ -55,7 +55,7 @@
             "page": ""
           }
         },
-        "custom_liquid_bxfykh": {
+        "device_type_display": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "{% if product.metafields.custom.device_type %}\n  <div class=\"product-device-type\">\n    <span>Device Type: {{ product.metafields.custom.device_type.value.name }}<\/span>\n    {% if product.metafields.custom.device_type.value.icon %}\n      <iconify-icon icon=\"mdi:{{ product.metafields.custom.device_type.value.icon }}\" ><\/iconify-icon><\/span>\n    {% endif %}\n  <\/div>\n{% endif %}"
@@ -91,7 +91,6 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-1",
-        "custom_liquid_bxfykh",
         "share",
         "description",
         "collapsible_tab_BU9it8"
