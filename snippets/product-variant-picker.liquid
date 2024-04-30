@@ -21,6 +21,7 @@
   >
     {%- for option in product.options_with_values -%}
       {%- liquid
+        assign option_values_count = option.values | size
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
 
@@ -32,7 +33,24 @@
           endif
         endif
       -%}
-      {%- if picker_type == 'swatch' -%}
+      {%- liquid
+        assign swatch_count = option.values | map: 'swatch' | compact | size
+        assign picker_type = block.settings.picker_type
+
+        if swatch_count > 0 and block.settings.swatch_shape != 'none'
+          if block.settings.picker_type == 'dropdown'
+            assign picker_type = 'swatch_dropdown'
+          else
+            assign picker_type = 'swatch'
+          endif
+        endif
+      -%}
+      {%- if option_values_count == 1 %}
+        <!-- Automatically select the single variant, and optionally hide this fieldset -->
+        <fieldset class="js product-form__input product-form__input--hidden" style="display: none;">
+          <input type="hidden" name="options[{{ option.name | escape }}]" value="{{ option.values.first | escape }}">
+        </fieldset>
+      {%- elsif picker_type == 'swatch' -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
