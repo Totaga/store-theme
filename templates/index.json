@@ -81,10 +81,11 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "product_Ykjnz6": {
+          "type": "product",
           "settings": {
-            "collection": "sensors"
+            "product": "tc001-pixel-display",
+            "second_image": false
           }
         },
         "product": {
@@ -102,7 +103,7 @@
         }
       },
       "block_order": [
-        "collection-0",
+        "product_Ykjnz6",
         "product",
         "collection-1"
       ],
