@@ -24,16 +24,17 @@
         "slide_jjRcmi": {
           "type": "slide",
           "settings": {
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/DALL_E_2024-04-30_16.26.11_-_A_modern_and_sleek_living_room_with_advanced_smart_home_technology_integrated_seamlessly._The_room_features_a_stylish_sofa_a_smart_coffee_table_with.webp",
+            "heading": "Your Privacy, Our Priority",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
+            "subheading": "Seamlessly integrate locally controlled devices for a secure smart home experience.",
+            "button_label": "Learn More",
+            "link": "shopify:\/\/pages\/get-started-with-your-smart-home",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
             "text_alignment": "center",
-            "image_overlay_opacity": 0,
+            "image_overlay_opacity": 30,
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
