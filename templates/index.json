@@ -51,7 +51,7 @@
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "ambient",
-        "show_text_below": false,
+        "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
     },
