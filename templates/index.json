@@ -35,9 +35,9 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/1000014229.webp",
-        "image_overlay_opacity": 60,
-        "image_height": "small",
+        "image": "shopify:\/\/shop_images\/DALL_E_2024-04-30_16.27.02_-_A_modern_and_sleek_living_room_with_advanced_smart_home_technology_integrated_seamlessly._The_room_features_a_stylish_sofa_a_smart_coffee_table_with.webp",
+        "image_overlay_opacity": 80,
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
