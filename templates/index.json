@@ -48,46 +48,6 @@
         "show_text_below": false
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "product_Ykjnz6": {
-          "type": "product",
-          "settings": {
-            "product": "tc001-pixel-display",
-            "second_image": false
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "hexagonal-rgb-wall-lights",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "tools"
-          }
-        }
-      },
-      "block_order": [
-        "product_Ykjnz6",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Featured Products",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -112,10 +72,51 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 12
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "product_Ykjnz6": {
+          "type": "product",
+          "settings": {
+            "product": "tc001-pixel-display",
+            "second_image": false
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "hexagonal-rgb-wall-lights",
+            "second_image": false
+          }
+        },
+        "product_py4pnH": {
+          "type": "product",
+          "settings": {
+            "product": "huion-k20-keydial",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "product_Ykjnz6",
+        "product",
+        "product_py4pnH"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "featured_collection": {
@@ -139,7 +140,7 @@
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
@@ -149,8 +150,8 @@
   },
   "order": [
     "image_banner",
-    "collage",
     "rich_text",
+    "collage",
     "featured_collection"
   ]
 }
