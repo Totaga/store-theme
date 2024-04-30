@@ -48,36 +48,6 @@
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Technology on Your Terms",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our mission is to empower homeowners with innovative smart home technology that enhances everyday life. We strive to provide a comprehensive selection of DIY, privacy-centric, and locally controlled smart solutions that enable individuals to create personalized, secure, and efficient living spaces. We are committed to delivering exceptional value, quality, and service, ensuring our customers can navigate the smart home ecosystem with confidence and ease. By fostering a community of tech enthusiasts and DIYers, we aim to inspire creativity and innovation in smart home development, making advanced technology accessible and enjoyable for all.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -108,7 +78,7 @@
         "collection-1"
       ],
       "settings": {
-        "heading": "Multimedia collage",
+        "heading": "Featured Products",
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
@@ -116,6 +86,36 @@
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Technology on Your Terms",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our mission is to empower homeowners with innovative smart home technology that enhances everyday life. We strive to provide a comprehensive selection of DIY, privacy-centric, and locally controlled smart solutions that enable individuals to create personalized, secure, and efficient living spaces. We are committed to delivering exceptional value, quality, and service, ensuring our customers can navigate the smart home ecosystem with confidence and ease. By fostering a community of tech enthusiasts and DIYers, we aim to inspire creativity and innovation in smart home development, making advanced technology accessible and enjoyable for all.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "featured_collection": {
@@ -149,8 +149,8 @@
   },
   "order": [
     "image_banner",
-    "rich_text",
     "collage",
+    "rich_text",
     "featured_collection"
   ]
 }
