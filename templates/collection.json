@@ -3,7 +3,7 @@
     "custom_liquid_DAat8X": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">{{ collection.image | image_url: height: 100 | image_tag }}<\/div>",
+        "custom_liquid": "{% if collection.image %}\n<div class=\"page-width\">{{ collection.image | image_url: height: 100 | image_tag }}<\/div>\n{% endif %}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -12,7 +12,7 @@
     "custom_liquid_7KMyE4": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">{{ collection.description }}<\/div>",
+        "custom_liquid": "{% if collection.description %}\n<div class=\"page-width\">{{ collection.description }}<\/div>\n{% endif %}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
