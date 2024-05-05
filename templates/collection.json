@@ -14,8 +14,8 @@
       "settings": {
         "custom_liquid": "{% if collection.description %}\n<div class=\"page-width\">{{ collection.description }}<\/div>\n{% endif %}",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "banner": {
