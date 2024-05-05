@@ -1,10 +1,28 @@
 {
   "sections": {
+    "custom_liquid_DAat8X": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ collection.image | image_url: height: 100 | image_tag }}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_7KMyE4": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ collection.description }}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
+        "show_collection_description": false,
+        "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
     },
@@ -30,6 +48,8 @@
     }
   },
   "order": [
+    "custom_liquid_DAat8X",
+    "custom_liquid_7KMyE4",
     "banner",
     "product-grid"
   ]
