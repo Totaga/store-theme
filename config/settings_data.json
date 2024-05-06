@@ -119,6 +119,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Logo_Dark_1500x512512x512.svg",
+    "checkout_layout": "threepage",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
