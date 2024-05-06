@@ -1,7 +1,7 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/Logo.svg",
-    "logo_width": 70,
+    "logo": "shopify:\/\/shop_images\/Logo_Light_1500x512512x512.svg",
+    "logo_width": 160,
     "favicon": "shopify:\/\/shop_images\/Logo.svg",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -99,7 +99,8 @@
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "Company",
     "brand_description": "<p>Totaga Ltd is a company registered in England and Wales. Company Number: 15624889<\/p>",
-    "brand_image_width": 50,
+    "brand_image": "shopify:\/\/shop_images\/Logo_Dark_1500x512512x512.svg",
+    "brand_image_width": 160,
     "social_facebook_link": "",
     "social_instagram_link": "",
     "social_youtube_link": "",
@@ -117,7 +118,7 @@
     "show_vendor": true,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/Logo.svg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_Dark_1500x512512x512.svg",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
