@@ -38,7 +38,7 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-container isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
-  <div class="section-{{ section.id }}-richtext content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}">
+  <div class="section-{{ section.id }}-richtext content-container gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper">
       {{ section.settings.rich_text_content }}
     </div>
@@ -85,22 +85,6 @@
         "type": "product",
         "id": "featured_product",
         "label": "Select a featured product"
-      },
-      {
-        "type": "select",
-        "id": "color_scheme",
-        "label": "Color Scheme",
-        "options": [
-          {
-            "value": "light",
-            "label": "Light"
-          },
-          {
-            "value": "dark",
-            "label": "Dark"
-          }
-        ],
-        "default": "light"
       },
       {
         "type": "checkbox",
