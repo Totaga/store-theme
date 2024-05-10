@@ -288,6 +288,37 @@
       (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187121514", tm:"shpfy_ui", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
     </script>
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+          const darkModeToggle = document.getElementById('dark-mode-toggle'); // Assume you have this button
+          darkModeToggle.addEventListener('click', function() {
+              document.body.classList.toggle('dark-mode');
+          });
+
+          // Sticky header functionality
+          window.onscroll = function() {makeHeaderSticky()};
+          var header = document.querySelector('.site-header'); // Replace '.site-header' with your header's class or ID
+          var sticky = header.offsetTop;
+
+          function makeHeaderSticky() {
+              if (window.pageYOffset > sticky) {
+                  header.classList.add("header--sticky");
+              } else {
+                  header.classList.remove("header--sticky");
+              }
+          }
+
+          // Check if dark mode was enabled previously
+          if(localStorage.getItem('dark-mode') === 'true') {
+              document.body.classList.add('dark-mode');
+          }
+
+          darkModeToggle.addEventListener('click', function() {
+              let isDarkMode = document.body.classList.contains('dark-mode');
+              localStorage.setItem('dark-mode', isDarkMode);
+          });
+      });
+    </script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16555380569"></script>
