@@ -64,7 +64,7 @@
         "full_width": false,
         "padding_top": 20,
         "padding_bottom": 20,
-        "gap_between": 30,
+        "gap_between": 50,
         "product_card_position": "right"
       }
     },
