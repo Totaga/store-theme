@@ -5,6 +5,23 @@
   --alpha-badge-border: 0.1;
 }
 
+.dark-mode {
+    --background-color: #171717;
+    --text-color: #ffffff;
+    --alpha-button-background: 0.8;
+    --alpha-button-border: 1;
+    --alpha-link: 1;
+    --alpha-badge-border: 0.3;
+  
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+}
+.header--sticky {
+    backdrop-filter: blur(10px);
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
