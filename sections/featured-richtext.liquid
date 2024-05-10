@@ -5,9 +5,9 @@
     display: grid;
     gap: {{ section.settings.gap_between | times: 0.75 | round: 0 }}px;
     {% if section.settings.product_card_position == 'left' %}
-      grid-template-columns: 1fr {{section.settings.text_width}};
+      grid-template-columns: 1fr {{section.settings.text_width}}%;
     {% else %}
-      grid-template-columns: {{section.settings.text_width}} 1fr;
+      grid-template-columns: {{section.settings.text_width}}% 1fr;
     {% endif %}
   }
 
