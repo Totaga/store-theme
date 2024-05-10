@@ -25,13 +25,18 @@
   background-color: rgba(23, 23, 23, 0.2);
 }
 
-.header__icon--darkmode {
+.header__icon,
+.header__icon--darkmode .icon {
   height: 4.4rem;
   width: 4.4rem;
   padding: 0;
+}
+
+.header__icon--darkmode {
   position: relative;
   margin-right: -1.2rem;
 }
+
 
 .product-card-wrapper .card,
 .contains-card--product {
