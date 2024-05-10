@@ -6,25 +6,23 @@
   flex-wrap: wrap; /* Ensures content can wrap on smaller screens */
   justify-content: space-between;
   align-items: flex-start;
+  gap: 20px; /* Adds a gap between flex items */
 }
 
 .section-{{ section.id }}-richtext {
-  flex-basis: 66.66%; /* Gives text block 2/3 of the width */
-  max-width: 66.66%; 
-  -webkit-flex-basis: 66.66%; /* For Safari */
+  flex-basis: calc(66.66% - 10px); /* Adjusts to account for the gap */
+  -webkit-flex-basis: calc(66.66% - 10px); /* For Safari */
 }
 
 .section-{{ section.id }}-featured-product {
-  flex-basis: 33.33%; /* Gives product block 1/3 of the width */
-  max-width: 33.33%; 
-  -webkit-flex-basis: 33.33%; /* For Safari */
+  flex-basis: calc(33.33% - 10px); /* Adjusts to account for the gap */
+  -webkit-flex-basis: calc(33.33% - 10px); /* For Safari */
 }
 
 @media screen and (max-width: 750px) {
   .section-{{ section.id }}-richtext,
   .section-{{ section.id }}-featured-product {
     flex-basis: 100%;
-    max-width: 100%;
     -webkit-flex-basis: 100%; /* For Safari */
   }
 }
