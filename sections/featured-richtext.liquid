@@ -5,9 +5,9 @@
     display: grid;
     gap: {{ section.settings.gap_between | times: 0.75 | round: 0 }}px;
     {% if section.settings.product_card_position == 'left' %}
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: auto {{section.settings.text_width}};
     {% else %}
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: {{section.settings.text_width}} auto;
     {% endif %}
   }
 
@@ -155,6 +155,16 @@
         "unit": "px",
         "label": "Gap Between",
         "default": 20
+      },
+      {
+        "type": "range",
+        "id": "text_width",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Text Width",
+        "default": 66
       },
       {
         "type": "select",
