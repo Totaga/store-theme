@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Totaga Smart Home</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f9;
+    }
+    .ad-container {
+        width: 300px;
+        height: 250px;
+        background: #ffffff;
+        border: 1px solid #d5d5d5;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+        font-size: 18px;
+        margin-top: 0;
+    }
+    p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .btn, .icon {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover, .icon:hover {
+        background-color: #0056b3;
+    }
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .material-icons {
+        font-size: 24px;
+        color: #fff;
+    }
+</style>
+<script>
+    function openLink() {
+        window.open('https://www.totaga.co.uk', '_blank');
+    }
+    function toggleLight(element) {
+        if (element.textContent === "lightbulb_outline") {
+            element.textContent = "lightbulb";
+        } else {
+            element.textContent = "lightbulb_outline";
+        }
+    }
+    function adjustThermostat(element) {
+        var temp = parseInt(element.textContent.replace('°C', ''), 10);
+        temp = temp < 30 ? temp + 1 : 20;
+        element.textContent = temp + '°C';
+    }
+</script>
+</head>
+<body>
+<div class="ad-container">
+    <h1>Enhance Your Home with Totaga</h1>
+    <p>Click the icons to interact with your smart home:</p>
+    <div class="icon" onclick="toggleLight(this)">
+        <span class="material-icons">lightbulb_outline</span>
+    </div>
+    <div class="icon" onclick="adjustThermostat(this)">
+        <span class="material-icons">20°C</span>
+    </div>
+    <button class="btn" onclick="openLink()">Learn More</button>
+</div>
+</body>
+</html>
