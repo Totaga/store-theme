@@ -64,17 +64,10 @@
             "heading": "Technology on Your Terms",
             "heading_size": "h1"
           }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our mission is to empower homeowners with innovative smart home technology that enhances everyday life. We strive to provide a comprehensive selection of DIY, privacy-centric, and locally controlled smart solutions that enable individuals to create personalized, secure, and efficient living spaces. We are committed to delivering exceptional value, quality, and service, ensuring our customers can navigate the smart home ecosystem with confidence and ease. By fostering a community of tech enthusiasts and DIYers, we aim to inspire creativity and innovation in smart home development, making advanced technology accessible and enjoyable for all.<\/p>"
-          }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "heading"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -83,6 +76,16 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 12
+      }
+    },
+    "featured_richtext_cHypBi": {
+      "type": "featured-richtext",
+      "settings": {
+        "rich_text_content": "<p>Our mission is to empower homeowners with innovative smart home technology that enhances everyday life. We strive to provide a comprehensive selection of DIY, privacy-centric, and locally controlled smart solutions that enable individuals to create personalized, secure, and efficient living spaces. We are committed to delivering exceptional value, quality, and service, ensuring our customers can navigate the smart home ecosystem with confidence and ease. By fostering a community of tech enthusiasts and DIYers, we aim to inspire creativity and innovation in smart home development, making advanced technology accessible and enjoyable for all.<\/p>",
+        "featured_product": "esp32-s3-box-3-open-voice-assistant",
+        "full_width": false,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "featured_collection": {
@@ -112,22 +115,12 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
-    },
-    "featured_richtext_cHypBi": {
-      "type": "featured-richtext",
-      "settings": {
-        "rich_text_content": "<p>Insert your rich text content here.<\/p>",
-        "featured_product": "",
-        "full_width": false,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
     }
   },
   "order": [
     "slideshow_Adgfy8",
     "rich_text",
-    "featured_collection",
-    "featured_richtext_cHypBi"
+    "featured_richtext_cHypBi",
+    "featured_collection"
   ]
 }
