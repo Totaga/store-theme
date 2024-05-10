@@ -4,34 +4,37 @@
   .section-{{ section.id }}-container {
     display: flex;
     flex-wrap: wrap;
-    /* Ensures content can wrap on smaller screens */
-    justify-content: space-between;
-    align-items: flex-start;
     gap: 20px;
     /* Adds a gap between flex items */
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
-  .section-{{ section.id }}
-  -richtext {
-    flex-basis: calc(66.66% - 10px);
+  /* Corrected class definitions: Removed line breaks */
+  .section-{{ section.id }}-richtext {
+    flex-grow: 2;
+    /* Allows the text block to take up the remaining space */
+    flex-basis: 0;
+    /* Start sizing from 0 before growing */
+    max-width: calc(66.66% - 20px);
     /* Adjusts to account for the gap */
-    -webkit-flex-basis: calc(66.66% - 10px);
-    /* For Safari */
   }
 
   .section-{{ section.id }}
   -featured-product {
-    flex-basis: calc(33.33% - 10px);
+    flex-grow: 1;
+    /* Allows the featured product block to grow */
+    flex-basis: 0;
+    /* Start sizing from 0 before growing */
+    max-width: calc(33.33% - 20px);
     /* Adjusts to account for the gap */
-    -webkit-flex-basis: calc(33.33% - 10px);
-    /* For Safari */
   }
 
   .section-{{ section.id }}
   -featured-product .featured-product__wrapper {
     max-height: {{ section.settings.product_card_max_height }}px;
     overflow: hidden;
-    /* Optional, to manage content that exceeds the max height */
+    /* Manages content that exceeds the max height */
   }
 
   @media screen and (max-width: 750px) {
@@ -39,13 +42,14 @@
     , .section-{{ section.id }}
     -featured-product {
       flex-basis: 100%;
-      -webkit-flex-basis: 100%;
-      /* For Safari */
+      /* Allows items to stack on mobile */
+      max-width: 100%;
+      /* Resets any max-width */
     }
   }
 
-  /* Continue with the rest of your styles */
-  .section-{{ section.id }}-padding {
+  .section-{{ section.id }}
+  -padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
@@ -62,8 +66,8 @@
   <div class="section-{{ section.id }}-richtext content-container gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper">
       <div>
-      {{ section.settings.heading }}
-      {{ section.settings.rich_text_content }}
+        {{ section.settings.heading }}
+        {{ section.settings.rich_text_content }}
       </div>
     </div>
   </div>

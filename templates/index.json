@@ -55,38 +55,16 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Technology on Your Terms",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 12
-      }
-    },
     "featured_richtext_cHypBi": {
       "type": "featured-richtext",
       "settings": {
         "rich_text_content": "<p>Our mission is to empower homeowners with innovative smart home technology that enhances everyday life. We strive to provide a comprehensive selection of DIY, privacy-centric, and locally controlled smart solutions that enable individuals to create personalized, secure, and efficient living spaces. We are committed to delivering exceptional value, quality, and service, ensuring our customers can navigate the smart home ecosystem with confidence and ease. By fostering a community of tech enthusiasts and DIYers, we aim to inspire creativity and innovation in smart home development, making advanced technology accessible and enjoyable for all.<\/p>",
+        "heading": "<h1>Technology on Your Terms<\/h1>",
         "featured_product": "esp32-s3-box-3-open-voice-assistant",
         "full_width": false,
         "padding_top": 20,
         "padding_bottom": 20,
-        "product_card_max_height": 670
+        "product_card_max_height": 500
       }
     },
     "featured_collection": {
@@ -120,7 +98,6 @@
   },
   "order": [
     "slideshow_Adgfy8",
-    "rich_text",
     "featured_richtext_cHypBi",
     "featured_collection"
   ]
