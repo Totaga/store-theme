@@ -49,18 +49,16 @@
       {% assign product = all_products[section.settings.featured_product] %}
 
       <div class="featured-product__wrapper">
-        <a href="{{ product.url }}">
-          <img
-            width="100%"
-            height="100%"
-            src="{{ product.featured_image | image_url }}"
-            alt="{{ product.title | escape }}">
-        </a>
-        <h3>
-          <a href="{{ product.url }}">{{ product.title }}</a>
-        </h3>
-        <p>{{ product.price | money_with_currency }}</p>
-        <a href="{{ product.url }}" class="button">View Product</a>
+        {% render 'card-product',
+          card_product: product,
+          media_aspect_ratio: "square",
+          show_secondary_image: false,
+          lazy_load: false,
+          quick_add: true,
+          section_id: section.id,
+          horizontal_class: true,
+          horizontal_quick_add: true
+        %}
       </div>
     {% endif %}
   </div>
@@ -115,7 +113,7 @@
     ],
     "presets": [
       {
-        "name": "Default",
+        "name": "Text & Product",
         "category": "Custom"
       }
     ]
