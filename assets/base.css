@@ -6,20 +6,23 @@
 }
 
 .dark-mode {
-    --background-color: #171717;
-    --text-color: #ffffff;
-    --alpha-button-background: 0.8;
-    --alpha-button-border: 1;
-    --alpha-link: 1;
-    --alpha-badge-border: 0.3;
-  
-    body {
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
+  --background-color: #171717;
+  --text-color: #ffffff;
+  --alpha-button-background: 0.8;
+  --alpha-button-border: 1;
+  --alpha-link: 1;
+  --alpha-badge-border: 0.3;
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
 }
 .scrolled-past-header {
-    backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  background-color: rgba(23, 23, 23, 0.2);
 }
 
 .product-card-wrapper .card,
