@@ -1,79 +1,82 @@
 {{ 'section-rich-text-featured-product.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-.section-{{ section.id }}-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* Two-thirds and one-third layout */
-  gap: 20px;
-}
-  
-@media screen and (max-width: 750px) {
   .section-{{ section.id }}-container {
-    grid-template-columns: 1fr; /* Stack elements in a single column for mobile */
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two-thirds and one-third layout */
+    gap: 20px;
   }
-}
-  
-  /* Conditionally swap grid template based on the product card position */
-  {% if section.settings.product_card_position == 'left' %}
-  .section-{{ section.id }}-container {
-    grid-template-columns: 1fr 2fr; /* Swap layout: Product 1/3, Text 2/3 */
-  }
-  {% endif %}
-  
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-  
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+    
+  @media screen and (max-width: 750px) {
+    .section-{{ section.id }}-container {
+      grid-template-columns: 1fr; /* Stack elements in a single column for mobile */
     }
   }
-  {%- endstyle -%}
-
-<div class="{% unless section.settings.full_width %}page-width{% endunless %} section-{{ section.id }}-container section-{{ section.id }}-padding">
-  {% if section.settings.product_card_position == "left" %}
-    <!-- Product Card on the Left -->
-    <div class="section-{{ section.id }}-featured-product">
-      {% render 'card-product',
-          card_product: product,
-          media_aspect_ratio: "square",
-          show_secondary_image: false,
-          lazy_load: false,
-          quick_add: true,
-          section_id: section.id
-        %}
-    </div>
-    <!-- Rich Text on the Right -->
-    <div class="section-{{ section.id }}-richtext content-container">
-      <div class="rich-text__wrapper">
-        {{ section.settings.heading }}
-        {{ section.settings.rich_text_content }}
+    
+    /* Conditionally swap grid template based on the product card position */
+    {% if section.settings.product_card_position == 'left' %}
+    .section-{{ section.id }}-container {
+      grid-template-columns: 1fr 2fr; /* Swap layout: Product 1/3, Text 2/3 */
+    }
+    {% endif %}
+    
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+    
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+    {%- endstyle -%}
+  
+  <div class="{% unless section.settings.full_width %}page-width{% endunless %} section-{{ section.id }}-container section-{{ section.id }}-padding">
+    {% if section.settings.featured_product != blank %}
+      {% assign product = all_products[section.settings.featured_product] %}
+      {% if section.settings.product_card_position == "left" %}
+      <!-- Product Card on the Left -->
+      <div class="section-{{ section.id }}-featured-product">
+        {% render 'card-product',
+            card_product: product,
+            media_aspect_ratio: "square",
+            show_secondary_image: false,
+            lazy_load: false,
+            quick_add: true,
+            section_id: section.id
+          %}
       </div>
-    </div>
-  {% else %}
-    <!-- Rich Text on the Left -->
-    <div class="section-{{ section.id }}-richtext content-container">
-      <div class="rich-text__wrapper">
-        {{ section.settings.heading }}
-        {{ section.settings.rich_text_content }}
+      <!-- Rich Text on the Right -->
+      <div class="section-{{ section.id }}-richtext content-container">
+        <div class="rich-text__wrapper">
+          {{ section.settings.heading }}
+          {{ section.settings.rich_text_content }}
+        </div>
       </div>
-    </div>
-    <!-- Product Card on the Right -->
-    <div class="section-{{ section.id }}-featured-product">
-      {% render 'card-product',
-          card_product: product,
-          media_aspect_ratio: "square",
-          show_secondary_image: false,
-          lazy_load: false,
-          quick_add: true,
-          section_id: section.id
-        %}
-    </div>
-  {% endif %}
-</div>
+    {% else %}
+      <!-- Rich Text on the Left -->
+      <div class="section-{{ section.id }}-richtext content-container">
+        <div class="rich-text__wrapper">
+          {{ section.settings.heading }}
+          {{ section.settings.rich_text_content }}
+        </div>
+      </div>
+      <!-- Product Card on the Right -->
+      <div class="section-{{ section.id }}-featured-product">
+        {% render 'card-product',
+            card_product: product,
+            media_aspect_ratio: "square",
+            show_secondary_image: false,
+            lazy_load: false,
+            quick_add: true,
+            section_id: section.id
+          %}
+      </div>
+    {% endif %}
+    {% endif %}
+  </div>
 
 {% schema %}
   {
