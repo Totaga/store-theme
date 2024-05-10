@@ -30,13 +30,6 @@
     /* Adjusts to account for the gap */
   }
 
-  .section-{{ section.id }}
-  -featured-product .featured-product__wrapper {
-    max-height: {{ section.settings.product_card_max_height }}px;
-    overflow: hidden;
-    /* Manages content that exceeds the max height */
-  }
-
   @media screen and (max-width: 750px) {
     .section-{{ section.id }}-richtext
     , .section-{{ section.id }}
@@ -147,16 +140,6 @@
         "unit": "px",
         "label": "Padding Bottom",
         "default": 20
-      },
-      {
-        "type": "range",
-        "id": "product_card_max_height",
-        "label": "Product Card Max Height",
-        "min": 100,
-        "max": 1000,
-        "step": 10,
-        "default": 300,
-        "unit": "px"
       }
     ],
     "presets": [
