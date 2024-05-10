@@ -1,6 +1,127 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'section-rich-text-featured-product.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
   }
+
+  .section-{{ section.id }}-richtext,
+  .section-{{ section.id }}-featured-product {
+    width: calc(50% - 20px);
+  }
+
+  @media screen and (max-width: 750px) {
+    .section-{{ section.id }}-richtext,
+    .section-{{ section.id }}-featured-product {
+      width: 100%;
+    }
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-container isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+  <div class="section-{{ section.id }}-richtext content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}">
+    <div class="rich-text__wrapper">
+      {{ section.settings.rich_text_content }}
+    </div>
+  </div>
+
+  <div class="section-{{ section.id }}-featured-product">
+    {% if section.settings.featured_product != blank %}
+      {% assign product = all_products[section.settings.featured_product] %}
+
+      <div class="featured-product__wrapper">
+        <a href="{{ product.url }}">
+          <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title | escape }}">
+        </a>
+        <h3>
+          <a href="{{ product.url }}">{{ product.title }}</a>
+        </h3>
+        <p>{{ product.price | money_with_currency }}</p>
+        <a href="{{ product.url }}" class="button">View Product</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text & Product",
+  "class": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "rich_text_content",
+      "label": "Rich Text Content",
+      "default": "<p>Insert your rich text content here.</p>"
+    },
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Select a featured product"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "light"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
