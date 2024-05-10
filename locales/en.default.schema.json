@@ -3367,15 +3367,6 @@
         "featured_product": {
           "label": "Select a featured product"
         },
-        "color_scheme": {
-          "label": "Color Scheme",
-          "options__1": {
-            "label": "Light"
-          },
-          "options__2": {
-            "label": "Dark"
-          }
-        },
         "full_width": {
           "label": "Make section full width"
         },
