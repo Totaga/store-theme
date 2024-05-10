@@ -25,6 +25,12 @@
   background-color: rgba(23, 23, 23, 0.2);
 }
 
+.header__icon--darkmode {
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 0;
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
