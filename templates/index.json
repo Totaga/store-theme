@@ -72,12 +72,68 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Products",
+        "title": "Lighting",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "lights",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_YCddtT": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Sensors",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sensors",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_PifN73": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Smart Hubs",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "smart-hub",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
@@ -101,6 +157,8 @@
   "order": [
     "slideshow_Adgfy8",
     "featured_richtext_cHypBi",
-    "featured_collection"
+    "featured_collection",
+    "featured_collection_YCddtT",
+    "featured_collection_PifN73"
   ]
 }
