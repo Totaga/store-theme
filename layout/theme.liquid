@@ -290,14 +290,14 @@
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
     <script>
             document.addEventListener('DOMContentLoaded', function() {
-          const darkModeToggle = document.getElementById('dark-mode-toggle'); // Assume you have this button
+          const darkModeToggle = document.getElementById('dark-mode-toggle');
           darkModeToggle.addEventListener('click', function() {
               document.body.classList.toggle('dark-mode');
           });
 
           // Sticky header functionality
           window.onscroll = function() {makeHeaderSticky()};
-          var header = document.querySelector('.site-header'); // Replace '.site-header' with your header's class or ID
+          var header = document.querySelector('.header-wrapper');
           var sticky = header.offsetTop;
 
           function makeHeaderSticky() {
