@@ -1,37 +1,43 @@
 {{ 'section-rich-text-featured-product.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  /* Styles that apply regardless of the product card position */
   .section-{{ section.id }}-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-      align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Ensures a gap between the flex items. */
+    align-items: flex-start;
   }
-  
-  /* Specific styles for when the product is on the left */
-  .product-left .section-{{ section.id }}-richtext {
-      order: 2; /* Places the text on the right */
+
+  /* Applies the two-thirds and one-third width on desktop. */
+  .section-{{ section.id }}-richtext
+  , .section-{{ section.id }}
+  -featured-product {
+    flex-grow: 1;
+    flex-basis: calc(33.333% - 20px);
+    /* Starting basis for product */
+    -webkit-flex-basis: calc(33.333% - 20px);
+    /* For Safari */
   }
-  
-  .product-left .section-{{ section.id }}-featured-product {
-      order: 1; /* Places the product on the left */
+
+  .section-{{ section.id }}
+  -richtext {
+    flex-basis: calc(66.666% - 20px);
+    /* Expands text to take up two-thirds */
+    -webkit-flex-basis: calc(66.666% - 20px);
+    /* For Safari */
   }
-  
-  /* Styles for the product right setup are already defined by default */
+
+  /* Adjustments for mobile */
   @media screen and (max-width: 750px) {
-      .section-{{ section.id }}-richtext, 
-      .section-{{ section.id }}-featured-product {
-          flex-basis: 100%;
-          max-width: 100%;
-      }
-  
-      /* You might want to reset the order for mobile views so they stack in the desired order */
-      .section-{{ section.id }}-richtext,
-      .section-{{ section.id }}-featured-product {
-          order: unset;
-      }
+    .section-{{ section.id }}-richtext
+    , .section-{{ section.id }}
+    -featured-product {
+      flex-basis: 100%;
+      /* Allows both elements to stack on mobile */
+      max-width: 100%;
+      /* Ensures full width utilization */
+    }
   }
 
   .section-{{ section.id }}
