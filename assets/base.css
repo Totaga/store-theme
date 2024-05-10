@@ -29,6 +29,8 @@
   height: 4.4rem;
   width: 4.4rem;
   padding: 0;
+  position: relative;
+  margin-right: -1.2rem;
 }
 
 .product-card-wrapper .card,
