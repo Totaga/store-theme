@@ -1,44 +1,61 @@
 {{ 'section-rich-text-featured-product.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-.section-{{ section.id }}-container {
-  display: flex;
-  flex-wrap: wrap; /* Ensures content can wrap on smaller screens */
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px; /* Adds a gap between flex items */
-}
-
-.section-{{ section.id }}-richtext {
-  flex-basis: calc(66.66% - 10px); /* Adjusts to account for the gap */
-  -webkit-flex-basis: calc(66.66% - 10px); /* For Safari */
-}
-
-.section-{{ section.id }}-featured-product {
-  flex-basis: calc(33.33% - 10px); /* Adjusts to account for the gap */
-  -webkit-flex-basis: calc(33.33% - 10px); /* For Safari */
-}
-
-@media screen and (max-width: 750px) {
-  .section-{{ section.id }}-richtext,
-  .section-{{ section.id }}-featured-product {
-    flex-basis: 100%;
-    -webkit-flex-basis: 100%; /* For Safari */
+  .section-{{ section.id }}-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures content can wrap on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    /* Adds a gap between flex items */
   }
-}
 
-/* Continue with the rest of your styles */
-.section-{{ section.id }}-padding {
-  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-}
+  .section-{{ section.id }}
+  -richtext {
+    flex-basis: calc(66.66% - 10px);
+    /* Adjusts to account for the gap */
+    -webkit-flex-basis: calc(66.66% - 10px);
+    /* For Safari */
+  }
 
-@media screen and (min-width: 750px) {
+  .section-{{ section.id }}
+  -featured-product {
+    flex-basis: calc(33.33% - 10px);
+    /* Adjusts to account for the gap */
+    -webkit-flex-basis: calc(33.33% - 10px);
+    /* For Safari */
+  }
+
+  .section-{{ section.id }}
+  -featured-product .featured-product__wrapper {
+    max-height: {{ section.settings.product_card_max_height }}px;
+    overflow: hidden;
+    /* Optional, to manage content that exceeds the max height */
+  }
+
+  @media screen and (max-width: 750px) {
+    .section-{{ section.id }}-richtext
+    , .section-{{ section.id }}
+    -featured-product {
+      flex-basis: 100%;
+      -webkit-flex-basis: 100%;
+      /* For Safari */
+    }
+  }
+
+  /* Continue with the rest of your styles */
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-container isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
@@ -117,6 +134,16 @@
         "unit": "px",
         "label": "Padding Bottom",
         "default": 20
+      },
+      {
+        "type": "range",
+        "id": "product_card_max_height",
+        "label": "Product Card Max Height",
+        "min": 100,
+        "max": 1000,
+        "step": 10,
+        "default": 300,
+        "unit": "px"
       }
     ],
     "presets": [
