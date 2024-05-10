@@ -1,61 +1,46 @@
 {{ 'section-rich-text-featured-product.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  /* Styles that apply regardless of the product card position */
   .section-{{ section.id }}-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* Adds a gap between flex items */
-    justify-content: space-between;
-    align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: flex-start;
   }
-
-  /* Corrected class definitions: Removed line breaks */
-  .section-{{ section.id }}-richtext {
-    flex-grow: 2;
-    /* Allows the text block to take up the remaining space */
-    flex-basis: 0;
-    /* Start sizing from 0 before growing */
-    max-width: calc(66.66% - 20px);
-    /* Adjusts to account for the gap */
+  
+  /* Specific styles for when the product is on the left */
+  .product-left .section-{{ section.id }}-richtext {
+      order: 2; /* Places the text on the right */
   }
-
-  .section-{{ section.id }}
-  -featured-product {
-    flex-grow: 1;
-    /* Allows the featured product block to grow */
-    flex-basis: 0;
-    /* Start sizing from 0 before growing */
-    max-width: calc(33.33% - 20px);
-    /* Adjusts to account for the gap */
+  
+  .product-left .section-{{ section.id }}-featured-product {
+      order: 1; /* Places the product on the left */
   }
-
+  
+  /* Styles for the product right setup are already defined by default */
   @media screen and (max-width: 750px) {
-    .section-{{ section.id }}-richtext
-    , .section-{{ section.id }}
-    -featured-product {
-      flex-basis: 100%;
-      /* Allows items to stack on mobile */
-      max-width: 100%;
-      /* Resets any max-width */
-    }
+      .section-{{ section.id }}-richtext, 
+      .section-{{ section.id }}-featured-product {
+          flex-basis: 100%;
+          max-width: 100%;
+      }
+  
+      /* You might want to reset the order for mobile views so they stack in the desired order */
+      .section-{{ section.id }}-richtext,
+      .section-{{ section.id }}-featured-product {
+          order: unset;
+      }
   }
-
-  .section-{{ section.id }}
-  -padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  
+  /* Continue with the rest of your styles */
+  .section-{{ section.id }}-padding {
+      /* padding styles */
   }
+  {%- endstyle -%}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<div class="section-{{ section.id }}-container isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+<div class="{% unless section.settings.full_width %}page-width{% endunless %} section-{{ section.id }}-container section-{{ section.id }}-padding {% if section.settings.product_card_position == 'left' %}product-left{% else %}product-right{% endif %}">
   <div class="section-{{ section.id }}-richtext content-container gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper">
       <div>
@@ -140,6 +125,22 @@
         "unit": "px",
         "label": "Padding Bottom",
         "default": 20
+      },
+      {
+        "type": "select",
+        "id": "product_card_position",
+        "label": "Product Card Position",
+        "options": [
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          }
+        ],
+        "default": "right"
       }
     ],
     "presets": [
