@@ -61,8 +61,10 @@
 <div class="section-{{ section.id }}-container isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
   <div class="section-{{ section.id }}-richtext content-container gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper">
+      <div>
       {{ section.settings.heading }}
       {{ section.settings.rich_text_content }}
+      </div>
     </div>
   </div>
 
