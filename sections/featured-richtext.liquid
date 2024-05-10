@@ -1,41 +1,58 @@
 {{ 'section-rich-text-featured-product.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+.section-{{ section.id }}-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures content can wrap on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-  .section-{{ section.id }}
-  -richtext
-  , .section-{{ section.id }}
-  -featured-product {
-    width: calc(50% - 20px);
-  }
+.section-{{ section.id }}-richtext {
+  flex-basis: 66.66%; /* Gives text block 2/3 of the width */
+  max-width: 66.66%; 
+  -webkit-flex-basis: 66.66%; /* For Safari */
+}
 
-  @media screen and (max-width: 750px) {
-    .section-{{ section.id }}-richtext
-    , .section-{{ section.id }}
-    -featured-product {
-      width: 100%;
-    }
-  }
+.section-{{ section.id }}-featured-product {
+  flex-basis: 33.33%; /* Gives product block 1/3 of the width */
+  max-width: 33.33%; 
+  -webkit-flex-basis: 33.33%; /* For Safari */
+}
 
-  .section-{{ section.id }}
-  -padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+@media screen and (max-width: 750px) {
+  .section-{{ section.id }}-richtext,
+  .section-{{ section.id }}-featured-product {
+    flex-basis: 100%;
+    max-width: 100%;
+    -webkit-flex-basis: 100%; /* For Safari */
   }
+}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+/* Continue with the rest of your styles */
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+}
 {%- endstyle -%}
+Key Changes:
+
+
+Flex Basis & Max Width: Using flex-basis and max-width allows for precise control over the width of elements within a flex container. Both properties have been adjusted to allocate 2/3 of the width to the text (section-{{ section.id }}-richtext) and 1/3 to the product (section-{{ section.id }}-featured-product) on desktop views. The -webkit-flex-basis is used for better compatibility with older versions of Safari.
+
+Flex Wrap: Added flex-wrap: wrap; to
+
+
+
+
+
 
 <div class="section-{{ section.id }}-container isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
   <div class="section-{{ section.id }}-richtext content-container gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}">
