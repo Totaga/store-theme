@@ -63,8 +63,7 @@
         "featured_product": "esp32-s3-box-3-open-voice-assistant",
         "full_width": false,
         "padding_top": 20,
-        "padding_bottom": 20,
-        "product_card_max_height": 500
+        "padding_bottom": 20
       }
     },
     "featured_collection": {
