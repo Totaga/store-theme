@@ -295,19 +295,6 @@
               document.body.classList.toggle('dark-mode');
           });
 
-          // Sticky header functionality
-          window.onscroll = function() {makeHeaderSticky()};
-          var header = document.querySelector('.header-wrapper');
-          var sticky = header.offsetTop;
-
-          function makeHeaderSticky() {
-              if (window.pageYOffset > sticky) {
-                  header.classList.add("header--sticky");
-              } else {
-                  header.classList.remove("header--sticky");
-              }
-          }
-
           // Check if dark mode was enabled previously
           if(localStorage.getItem('dark-mode') === 'true') {
               document.body.classList.add('dark-mode');
