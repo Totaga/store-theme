@@ -42,6 +42,7 @@
         "slide_YTFK9c": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stock_Kitchen_1.png",
             "heading": "Our Story",
             "heading_size": "h1",
             "subheading": "A message from the founders, we believe honesty and transparency is the best policy",
@@ -66,7 +67,7 @@
         "layout": "full_bleed",
         "slide_height": "small",
         "slider_visual": "dots",
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "image_behavior": "ambient",
         "show_text_below": true,
