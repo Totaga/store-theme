@@ -38,11 +38,30 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_YTFK9c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Smart_Living_2.png",
+            "heading": "Our Story",
+            "heading_size": "h1",
+            "subheading": "A message from the founders, we believe honesty and transparency is the best policy",
+            "button_label": "Read More",
+            "link": "shopify:\/\/pages\/from-the-founders",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 30,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_n8FVUk",
-        "slide_jjRcmi"
+        "slide_jjRcmi",
+        "slide_YTFK9c"
       ],
       "settings": {
         "layout": "full_bleed",
