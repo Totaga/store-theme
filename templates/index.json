@@ -96,8 +96,8 @@
           "settings": {
             "title": "<strong>Your Privacy, Our Priority<\/strong>",
             "text": "<p>Devices that keep your data secured and operations local.<\/p>",
-            "link_label": "",
-            "link": ""
+            "link_label": "Learn More",
+            "link": "shopify:\/\/pages\/building-a-privacy-focused-smart-home-with-local-control"
           }
         },
         "column_wATXj7": {
@@ -105,8 +105,8 @@
           "settings": {
             "title": "<strong>One-Stop Smart Home Shop<\/strong>",
             "text": "<p>From basics to advanced, find all your smart home needs in one place.<\/p>",
-            "link_label": "",
-            "link": ""
+            "link_label": "Browse",
+            "link": "shopify:\/\/collections"
           }
         },
         "column_8FzNtV": {
@@ -114,8 +114,8 @@
           "settings": {
             "title": "<strong>Easy Start, Advanced Potential<\/strong>",
             "text": "<p>Products that grow with your comfort level, from plug-and-play to fully customizable.<\/p>",
-            "link_label": "",
-            "link": ""
+            "link_label": "Read FAQs",
+            "link": "shopify:\/\/pages\/smart-home-faqs"
           }
         }
       },
