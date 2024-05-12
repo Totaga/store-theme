@@ -172,6 +172,9 @@
         "text_FFE7WU",
         "button_XLUHTN"
       ],
+      "custom_css": [
+        ".image-with-text__media {border: none;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Home-Assistant-Logo.svg",
         "height": "adapt",
