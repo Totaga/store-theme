@@ -274,6 +274,10 @@
     </div>
     {% render 'header-search', input_id: 'Search-In-Modal' %}
 
+    <a href="#" class="header__icon header__icon--darkmode link focus-inset" id="dark-mode-toggle">
+        {% render 'icon-moon' %}
+        <span class="visually-hidden">Toggle Dark Mode</span>
+    </a>
     {%- if shop.customer_accounts_enabled -%}
       <a
         href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -323,10 +327,6 @@
         </div>
       {%- endif -%}
     </a>
-    {% comment %} <a href="#" class="header__icon header__icon--darkmode link focus-inset" id="dark-mode-toggle">
-        {% render 'icon-moon' %}
-        <span class="visually-hidden">Toggle Dark Mode</span>
-    </a> {% endcomment %}
     </div>
 </header>
 {% if section.settings.sticky_header_type != 'none' %}</sticky-header> {% else %}</div>{% endif %}
