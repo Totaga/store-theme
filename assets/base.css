@@ -6,16 +6,22 @@
 }
 
 .dark-mode {
-  --background-color: #171717;
-  --text-color: #ffffff;
-  --alpha-button-background: 0.8;
-  --alpha-button-border: 1;
-  --alpha-link: 1;
-  --alpha-badge-border: 0.3;
+    --background-color: #171717;
+    --text-color: #ffffff;
+    --alpha-button-background: .8;
+    --alpha-button-border: 1;
+    --alpha-link: 1;
+    --alpha-badge-border: .3;
+    --color-background: #171717;
+    --gradient-background: #171717;
+    --color-foreground: #e9e9e9;
+    color: #e9e9e9;
+    border-color: #e9e9e9;
 
   body {
     background-color: var(--background-color);
-    color: var(--text-color);
+    background: var(--background-color);
+    color: var(--color-foreground);
   }
 }
 .scrolled-past-header {
