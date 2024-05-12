@@ -77,15 +77,68 @@
     "featured_richtext_cHypBi": {
       "type": "featured-richtext",
       "settings": {
-        "rich_text_content": "<p>Our mission is to empower homeowners with innovative smart home technology that enhances everyday life. We strive to provide a comprehensive selection of DIY, privacy-centric, and locally controlled smart solutions that enable individuals to create personalized, secure, and efficient living spaces. We are committed to delivering exceptional value, quality, and service, ensuring our customers can navigate the smart home ecosystem with confidence and ease. By fostering a community of tech enthusiasts and DIYers, we aim to inspire creativity and innovation in smart home development, making advanced technology accessible and enjoyable for all.<\/p>",
-        "heading": "<h1>Technology on Your Terms<\/h1>",
+        "rich_text_content": "<p>Our aim is to equip your home with technology that actually makes your life better without the need for a tech degree. Whether it's your first venture into smart home gear or you're looking to upgrade your setup, we've got your back. We've handpicked a selection of smart home devices that deliver on their promises, because we believe in making tech work for everyone. You won’t find any lofty tech jargon or over-the-top claims here. Just a reliable selection of smart home tech, straightforward support, and a commitment to keeping your data private. Let’s make smart home technology work for you.<\/p>",
+        "heading": "<h1>Tech on Your Terms<\/h1>",
         "featured_product": "nspanel-pro-smart-home-control-panel",
         "full_width": false,
         "padding_top": 20,
         "padding_bottom": 20,
-        "gap_between": 28,
-        "text_width": 70,
+        "gap_between": 30,
+        "text_width": 75,
         "product_card_position": "right"
+      }
+    },
+    "multicolumn_MGUMgj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_M7nLP8": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Your Privacy, Our Priority<\/strong>",
+            "text": "<p>Devices that keep your data secured and operations local.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wATXj7": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>One-Stop Smart Home Shop<\/strong>",
+            "text": "<p>From basics to advanced, find all your smart home needs in one place.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8FzNtV": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Easy Start, Advanced Potential<\/strong>",
+            "text": "<p>Products that grow with your comfort level, from plug-and-play to fully customizable.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_M7nLP8",
+        "column_wATXj7",
+        "column_8FzNtV"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "featured_collection": {
@@ -176,6 +229,7 @@
   "order": [
     "slideshow_Adgfy8",
     "featured_richtext_cHypBi",
+    "multicolumn_MGUMgj",
     "featured_collection",
     "featured_collection_YCddtT",
     "featured_collection_PifN73"
