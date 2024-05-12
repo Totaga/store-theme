@@ -73,20 +73,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "featured_richtext_cHypBi": {
-      "type": "featured-richtext",
-      "settings": {
-        "rich_text_content": "<p>Our aim is to equip your home with technology that actually makes your life better without the need for a tech degree. Whether it's your first venture into smart home gear or you're looking to upgrade your setup, we've got your back. We've handpicked a selection of smart home devices that deliver on their promises, because we believe in making tech work for everyone. You won’t find any lofty tech jargon or over-the-top claims here. Just a reliable selection of smart home tech, straightforward support, and a commitment to keeping your data private. Let’s make smart home technology work for you.<\/p>",
-        "heading": "<h1>Tech on Your Terms<\/h1>",
-        "featured_product": "nspanel-pro-smart-home-control-panel",
-        "full_width": false,
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "gap_between": 30,
-        "text_width": 75,
-        "product_card_position": "right"
-      }
-    },
     "multicolumn_MGUMgj": {
       "type": "multicolumn",
       "blocks": {
@@ -141,6 +127,20 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_bottom": 36
+      }
+    },
+    "featured_richtext_cHypBi": {
+      "type": "featured-richtext",
+      "settings": {
+        "rich_text_content": "<p>Our aim is to equip your home with technology that actually makes your life better without the need for a tech degree. Whether it's your first venture into smart home gear or you're looking to upgrade your setup, we've got your back. We've handpicked a selection of smart home devices that deliver on their promises, because we believe in making tech work for everyone. You won’t find any lofty tech jargon or over-the-top claims here. Just a reliable selection of smart home tech, straightforward support, and a commitment to keeping your data private. Let’s make smart home technology work for you.<\/p>",
+        "heading": "<h1>Tech on Your Terms<\/h1>",
+        "featured_product": "nspanel-pro-smart-home-control-panel",
+        "full_width": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "gap_between": 30,
+        "text_width": 75,
+        "product_card_position": "right"
       }
     },
     "image_with_text_EUFrka": {
@@ -280,8 +280,8 @@
   },
   "order": [
     "slideshow_Adgfy8",
-    "featured_richtext_cHypBi",
     "multicolumn_MGUMgj",
+    "featured_richtext_cHypBi",
     "image_with_text_EUFrka",
     "featured_collection",
     "featured_collection_YCddtT",
