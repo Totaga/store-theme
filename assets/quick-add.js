@@ -5,6 +5,10 @@ if (!customElements.get('quick-add-modal')) {
       constructor() {
         super();
         this.modalContent = this.querySelector('[id^="QuickAddInfo-"]');
+
+        this.addEventListener('product-info:loaded', ({ target }) => {
+          target.addPreProcessCallback(this.preprocessHTML.bind(this));
+        });
       }
 
       hide(preventFocus = false) {
@@ -25,10 +29,10 @@ if (!customElements.get('quick-add-modal')) {
           .then((response) => response.text())
           .then((responseText) => {
             const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
-            const productElement = responseHTML.querySelector('section[id^="MainProduct-"]');
+            const productElement = responseHTML.querySelector('product-info');
 
             this.preprocessHTML(productElement);
-            HTMLUpdateUtility.setInnerHTML(this.modalContent, productElement.innerHTML);
+            HTMLUpdateUtility.setInnerHTML(this.modalContent, productElement.outerHTML);
 
             if (window.Shopify && Shopify.PaymentButton) {
               Shopify.PaymentButton.init();
@@ -38,22 +42,10 @@ if (!customElements.get('quick-add-modal')) {
             super.show(opener);
           })
           .finally(() => {
-            this.bindProductChangeCallbacks();
             opener.removeAttribute('aria-disabled');
             opener.classList.remove('loading');
             opener.querySelector('.loading__spinner').classList.add('hidden');
           });
-      }
-
-      bindProductChangeCallbacks() {
-        const swapProductUtility = this.querySelector('variant-selects')?.swapProductUtility;
-        if (swapProductUtility) {
-          swapProductUtility.addPreProcessCallback(this.preprocessHTML.bind(this));
-          swapProductUtility.addPostProcessCallback(() => {
-            this.modalContent = this.querySelector('[id^="QuickAddInfo-"]');
-            this.bindProductChangeCallbacks();
-          });
-        }
       }
 
       preprocessHTML(productElement) {
@@ -69,10 +61,7 @@ if (!customElements.get('quick-add-modal')) {
       }
 
       preventVariantURLSwitching(productElement) {
-        const variantPicker = productElement.querySelector('variant-selects');
-        if (!variantPicker) return;
-
-        variantPicker.setAttribute('data-update-url', 'false');
+        productElement.setAttribute('data-update-url', 'false');
       }
 
       removeDOMElements(productElement) {
@@ -88,10 +77,17 @@ if (!customElements.get('quick-add-modal')) {
 
       preventDuplicatedIDs(productElement) {
         const sectionId = productElement.dataset.section;
-        productElement.innerHTML = productElement.innerHTML.replaceAll(sectionId, `quickadd-${sectionId}`);
-        productElement.querySelectorAll('variant-selects, product-info').forEach((element) => {
-          element.dataset.originalSection = sectionId;
+
+        const oldId = sectionId;
+        const newId = `quickadd-${sectionId}`;
+        productElement.innerHTML = productElement.innerHTML.replaceAll(oldId, newId);
+        Array.from(productElement.attributes).forEach((attribute) => {
+          if (attribute.value.includes(oldId)) {
+            productElement.setAttribute(attribute.name, attribute.value.replace(oldId, newId));
+          }
         });
+
+        productElement.dataset.originalSection = sectionId;
       }
 
       removeGalleryListSemantic(productElement) {
@@ -104,7 +100,7 @@ if (!customElements.get('quick-add-modal')) {
 
       updateImageSizes(productElement) {
         const product = productElement.querySelector('.product');
-        const desktopColumns = product.classList.contains('product--columns');
+        const desktopColumns = product?.classList.contains('product--columns');
         if (!desktopColumns) return;
 
         const mediaImages = product.querySelectorAll('.product__media img');
