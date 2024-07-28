@@ -1,0 +1,45 @@
+{% assign tags = product.metafields.custom %}
+{% if tags.device_type %}
+  <div class="device-type">
+    {% if tags.device_type.value.icon %}
+      <iconify-icon icon="mdi:{{ tags.device_type.value.icon }}"></iconify-icon>
+    {% endif %}
+    {{ tags.device_type.value.name }}
+  </div>
+{% endif %}
+{% if tags.ecosystems.value %}
+  <div class="ecosystems">
+    <span>Works With:</span>
+    <ul>
+      {% assign ecosystems = tags.ecosystems.value %}
+      {% for ecosystem in ecosystems %}
+        <li>
+          <div class="ecosystem">
+            {% if ecosystem.icon %}
+              {{ ecosystem.icon | image_url: width: 30 | image_tag }}
+            {% endif %}
+            <a href="{{ ecosystem.page }}" target="_blank">{{ ecosystem.name }}</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+{% if tags.sensors.value %}
+  <div class="sensors">
+    <span>Sensors:</span>
+    <ul>
+      {% assign sensors = tags.sensors.value %}
+      {% for sensor in sensors %}
+        <li>
+          <div class="sensor">
+            {% if sensor.icon %}
+              <iconify-icon icon="mdi:{{ sensor.icon }}"></iconify-icon>
+            {% endif %}
+            {{ sensor.name }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

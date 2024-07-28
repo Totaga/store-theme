@@ -158,6 +158,11 @@ iconify-icon {
   margin-top: 0;
 }
 
+.device-type {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Align items vertically */
+}
+
 /* base */
 
 .page-width {
