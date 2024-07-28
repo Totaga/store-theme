@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -56,6 +65,15 @@
           "type": "description",
           "settings": {
           }
+        },
+        "collapsible_tab_iV9bt6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "truck",
+            "content": "<p><strong>Standard Shipping<\/strong>: Estimated 5-15 business days<\/p><ul><li>Free for orders over £50<\/li><li>£4.99 for orders under £50<\/li><\/ul>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -67,7 +85,8 @@
         "quantity_selector",
         "buy_buttons",
         "custom_liquid_rBc83K",
-        "description"
+        "description",
+        "collapsible_tab_iV9bt6"
       ],
       "settings": {
         "enable_sticky_info": true,
