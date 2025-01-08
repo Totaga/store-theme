@@ -1,0 +1,138 @@
+# Shopify Theme Development Rules
+
+# Company Mission and Values
+mission:
+  statement: "To empower homeowners with innovative smart home technology that enhances everyday life while ensuring the highest standards of privacy and security"
+  core_values:
+    - "Privacy and local control first"
+    - "Comprehensive smart home solutions"
+    - "Expert guidance and support"
+    - "Home Assistant advocacy"
+    - "Security focused"
+    - "Community-driven development"
+
+# Business Objectives
+objectives:
+  target_audience:
+    - "Smart Home Newbies (25-45)"
+    - "Privacy-Conscious Consumers (30-55)"
+    - "Tech Enthusiasts and Tinkerers (20-50)"
+    - "Eco-Conscious Consumers (25-55)"
+    - "Advanced Home Automation Users (35-60)"
+  
+  development_principles:
+    - "Focus on mobile-first design (majority of traffic)"
+    - "Prioritize user privacy and data security"
+    - "Ensure clear product information and shipping expectations"
+    - "Implement comprehensive product filtering and categorization"
+    - "Create intuitive navigation for different user expertise levels"
+    - "Support community engagement and knowledge sharing"
+
+# Development Focus
+focus:
+  user_experience:
+    - "Clear shipping and delivery information (7-14 business days UK)"
+    - "Transparent product sourcing and availability"
+    - "Easy access to support and documentation"
+    - "Simple product comparison and selection"
+    - "Intuitive category navigation"
+  
+  content_requirements:
+    - "Detailed product specifications"
+    - "Clear compatibility information"
+    - "Setup guides and documentation"
+    - "Privacy and security features"
+    - "Home Assistant integration details"
+
+# File Organization
+organize:
+  sections: sections/
+  templates: templates/
+  snippets: snippets/
+  assets: assets/
+  styles: assets/css/
+  scripts: assets/js/
+  locales: locales/
+  config: config/
+  layout: layout/
+
+# Naming Conventions
+naming:
+  sections: kebab-case
+  templates: kebab-case
+  snippets: kebab-case
+  assets: kebab-case
+  styles: kebab-case
+  scripts: kebab-case
+  schema_settings: snake_case
+  liquid_variables: snake_case
+
+# Code Patterns
+patterns:
+  - description: "Use schema settings for customizable content"
+    match: "{% schema %}"
+    location: "sections/*.liquid"
+    required: true
+
+  - description: "Include alt text for images"
+    match: "<img"
+    requires: "alt="
+    location: "**/*.liquid"
+
+  - description: "Use semantic HTML elements"
+    prefer:
+      - "<header>"
+      - "<main>"
+      - "<footer>"
+      - "<nav>"
+      - "<article>"
+      - "<section>"
+    location: "**/*.liquid"
+
+  - description: "Use CSS custom properties for theme settings"
+    match: "var(--*)"
+    location: "assets/css/*.css"
+
+  - description: "Use translation keys for text content"
+    match: "{{ 't:*' }}"
+    location: "**/*.liquid"
+
+# Best Practices
+practices:
+  - "Use CSS Grid and Flexbox for layouts"
+  - "Implement responsive images using srcset"
+  - "Optimize assets for performance"
+  - "Use lazy loading for below-fold images"
+  - "Implement proper heading hierarchy"
+  - "Use semantic class names"
+  - "Follow BEM naming convention for CSS"
+  - "Implement proper schema settings for sections"
+  - "Use translation keys for all text content"
+  - "Implement proper meta tags for SEO"
+
+# Performance Rules
+performance:
+  - "Minimize HTTP requests"
+  - "Optimize and compress images"
+  - "Use async loading for non-critical scripts"
+  - "Implement critical CSS"
+  - "Use responsive images"
+  - "Minimize render-blocking resources"
+
+# Accessibility Rules
+accessibility:
+  - "Use proper ARIA labels"
+  - "Implement proper focus states"
+  - "Use semantic HTML"
+  - "Provide alt text for images"
+  - "Maintain color contrast ratios"
+  - "Implement keyboard navigation"
+
+# SEO Rules
+seo:
+  - "Use proper meta tags"
+  - "Implement structured data"
+  - "Use semantic HTML"
+  - "Optimize image alt text"
+  - "Use proper heading hierarchy"
+  - "Implement canonical URLs" 
