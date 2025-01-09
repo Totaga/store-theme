@@ -8,38 +8,42 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
-.dark-mode {
-    --background-color: #171717;
-    --text-color: #ffffff;
-    --alpha-button-background: .8;
-    --alpha-button-border: 1;
-    --alpha-link: 1;
-    --alpha-badge-border: .3;
-    --color-background: #171717;
-    --gradient-background: #171717;
-    --color-foreground: #e9e9e9;
-    color: #e9e9e9;
-    border-color: #e9e9e9;
-
-  body {
-    background-color: var(--background-color);
-    background: var(--background-color);
-    color: var(--color-foreground);
-  }
+/* Theme Toggle Button Styles */
+.header__icon--theme {
+  margin-left: 1rem;
+  transition: color var(--duration-short) ease;
 }
 
-.header__icon,
-.header__icon--darkmode .icon {
-  height: 4.4rem;
-  width: 4.4rem;
-  padding: 0;
+/* Ensure .svg-wrapper within theme toggle matches existing header icons */
+.header__icon--theme .svg-wrapper {
+  position: relative; /* To position child icons */
 }
 
-.header__icon--darkmode {
+/* Theme Icons (Sun and Moon) */
+.theme-toggle__sun,
+.theme-toggle__moon {
+  fill: currentColor; /* Inherit color from parent */
+  transition: opacity 0.3s ease, transform 0.3s ease;
   position: relative;
-  margin-right: -1.2rem;
 }
 
+/* Initial Visibility */
+.theme-toggle__sun {
+  display: flex !important;
+}
+
+.theme-toggle__moon {
+  display: none !important;
+}
+
+/* Toggle visibility based on theme */
+[data-theme="dark"] .header__icon--theme .theme-toggle__sun {
+  display: none !important;
+}
+
+[data-theme="dark"] .header__icon--theme .theme-toggle__moon {
+  display: flex !important;
+}
 
 .product-card-wrapper .card,
 .contains-card--product {

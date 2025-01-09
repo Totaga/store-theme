@@ -1,17 +1,29 @@
+// theme-toggle.js
+
+// Constants for theme configuration
+const IGNORED_ELEMENTS = ['site-header', 'announcement-bar', 'header-wrapper'];
+
+const LIGHT_THEME = 'color-scheme-1';
+const DARK_THEME = 'color-scheme-2';
+
 class ThemeToggle extends HTMLElement {
   constructor() {
     super();
-    this.addEventListener('DOMContentLoaded', this.init.bind(this));
-    // Also try to init immediately in case the DOM is already loaded
+    // Bind the init method to ensure proper 'this' context
+    this.init = this.init.bind(this);
+  }
+
+  connectedCallback() {
+    // Initialize when the element is added to the DOM
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', this.init.bind(this));
+      document.addEventListener('DOMContentLoaded', this.init);
     } else {
       this.init();
     }
   }
 
   init() {
-    this.button = this.querySelector('button');
+    this.button = this.querySelector('button.header__icon--theme');
 
     if (!this.button) {
       console.warn('Theme toggle button not found');
@@ -44,12 +56,22 @@ class ThemeToggle extends HTMLElement {
   }
 
   setTheme(theme) {
-    // Remove all color scheme classes
-    document.documentElement.classList.remove('color-scheme-1', 'color-scheme-3');
-    // Add appropriate color scheme class
-    document.documentElement.classList.add(`color-scheme-${theme === 'dark' ? '3' : '1'}`);
-    // Update data-theme attribute for icon visibility
+    // Set the data-theme attribute first for icon visibility
     document.documentElement.setAttribute('data-theme', theme);
+
+    // Update ARIA label for accessibility
+    this.button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+
+    // Get all elements that should change theme
+    const elements = Array.from(document.getElementsByClassName(LIGHT_THEME))
+      .concat(Array.from(document.getElementsByClassName(DARK_THEME)))
+      .filter((element) => !IGNORED_ELEMENTS.some((className) => element.classList.contains(className)));
+
+    // Update theme for each element
+    elements.forEach((element) => {
+      element.classList.remove(LIGHT_THEME, DARK_THEME);
+      element.classList.add(theme === 'dark' ? DARK_THEME : LIGHT_THEME);
+    });
   }
 
   toggleTheme() {
@@ -60,4 +82,5 @@ class ThemeToggle extends HTMLElement {
   }
 }
 
+// Define the custom element
 customElements.define('theme-toggle', ThemeToggle);

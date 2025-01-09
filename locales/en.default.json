@@ -39,6 +39,9 @@
       "search": "Search",
       "reset": "Clear search term"
     },
+    "theme_toggle": {
+      "toggle": "Toggle theme"
+    },
     "cart": {
       "view": "View cart ({{ count }})",
       "view_empty_cart": "View cart",
