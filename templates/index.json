@@ -168,6 +168,7 @@
         ".image-with-text__media {border: none;}"
       ],
       "settings": {
+        "image": "shopify://shop_images/Stock_HA_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
