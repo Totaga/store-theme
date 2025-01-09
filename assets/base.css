@@ -27,12 +27,6 @@
     color: var(--color-foreground);
   }
 }
-.scrolled-past-header {
-  --webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-
-  background-color: rgba(23, 23, 23, 0.2);
-}
 
 .header__icon,
 .header__icon--darkmode .icon {

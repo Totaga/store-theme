@@ -224,6 +224,19 @@
           </localization-form>
         {%- endif -%}
       </div>
+      
+      <theme-toggle class="header__icon header__icon--theme link focus-inset">
+        <button id="theme-toggle">
+          <span class="theme-toggle-light">
+            {% render 'icon-sun' %}
+          </span>
+          <span class="theme-toggle-dark">
+            {% render 'icon-moon' %}
+          </span>
+          <span class="visually-hidden">Toggle dark mode</span>
+        </button>
+      </theme-toggle>
+
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- if shop.customer_accounts_enabled -%}

@@ -1,0 +1,24 @@
+.header__icon--theme {
+  height: 4.4rem;
+  width: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__icon--theme svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.theme-toggle-light,
+.theme-toggle-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="light"] .theme-toggle-dark,
+[data-theme="dark"] .theme-toggle-light {
+  display: none;
+} 
