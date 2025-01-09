@@ -89,6 +89,7 @@
         "column_M7nLP8": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Icon_Totaga_Camera.svg",
             "title": "<strong>Your Privacy, Our Priority</strong>",
             "text": "<p>Devices that keep your data secured and operations local.</p>",
             "link_label": "Learn More",
@@ -98,6 +99,7 @@
         "column_wATXj7": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Icon_Totaga_Light.svg",
             "title": "<strong>One-Stop Smart Home Shop</strong>",
             "text": "<p>From basics to advanced, find all your smart home needs in one place.</p>",
             "link_label": "Browse",
@@ -107,6 +109,7 @@
         "column_8FzNtV": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Icon_Totaga_Gear_Slow.svg",
             "title": "<strong>Easy Start, Advanced Potential</strong>",
             "text": "<p>Products that grow with your comfort level, from plug-and-play to fully customizable.</p>",
             "link_label": "Read FAQs",
