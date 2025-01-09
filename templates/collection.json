@@ -12,8 +12,8 @@
     "custom_liquid_DAat8X": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% if collection.image %}\n<div class=\"page-width\">{{ collection.image | image_url: height: 100 | image_tag }}<\/div>\n{% endif %}",
-        "color_scheme": "",
+        "custom_liquid": "{% if collection.image %}\n<div class=\"page-width\">{{ collection.image | image_url: height: 100 | image_tag }}</div>\n{% endif %}",
+        "color_scheme": "scheme-1",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -21,7 +21,7 @@
     "custom_liquid_7KMyE4": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% if collection.description %}\n<div class=\"page-width\">{{ collection.description }}<\/div>\n{% endif %}",
+        "custom_liquid": "{% if collection.description %}\n<div class=\"page-width\">{{ collection.description }}</div>\n{% endif %}",
         "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 12
@@ -41,7 +41,7 @@
       "settings": {
         "products_per_page": 20,
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,

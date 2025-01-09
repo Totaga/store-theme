@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -21,8 +21,7 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -33,8 +32,7 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -45,8 +43,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -58,21 +55,23 @@
         "custom_liquid_rBc83K": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% assign tags = product.metafields.custom %}\n{% if tags.device_type %}\n  <div class=\"device-type\">\n    {% if tags.device_type.value.icon %}\n      <iconify-icon icon=\"mdi:{{ tags.device_type.value.icon }}\"><\/iconify-icon>\n    {% endif %}\n    {{ tags.device_type.value.name }}\n  <\/div>\n{% endif %}\n{% if tags.ecosystems.value %}\n  <div class=\"ecosystems\">\n    <span>Works With:<\/span>\n    <ul>\n      {% assign ecosystems = tags.ecosystems.value %}\n      {% for ecosystem in ecosystems %}\n        <li>\n          <div class=\"ecosystem\">\n            {% if ecosystem.icon %}\n              {{ ecosystem.icon | image_url: width: 30 | image_tag }}\n            {% endif %}\n            <a href=\"{{ ecosystem.page }}\" target=\"_blank\">{{ ecosystem.name }}<\/a>\n          <\/div>\n        <\/li>\n      {% endfor %}\n    <\/ul>\n  <\/div>\n{% endif %}\n{% if tags.sensors.value %}\n  <div class=\"sensors\">\n    <span>Sensors:<\/span>\n    <ul>\n      {% assign sensors = tags.sensors.value %}\n      {% for sensor in sensors %}\n        <li>\n          <div class=\"sensor\">\n            {% if sensor.icon %}\n              <iconify-icon icon=\"mdi:{{ sensor.icon }}\"><\/iconify-icon>\n            {% endif %}\n            {{ sensor.name }}\n          <\/div>\n        <\/li>\n      {% endfor %}\n    <\/ul>\n  <\/div>\n{% endif %}"
+            "custom_liquid": "{% assign tags = product.metafields.custom %}\n{% if tags.device_type %}\n  <div class=\"device-type\">\n    {% if tags.device_type.value.icon %}\n      <iconify-icon icon=\"mdi:{{ tags.device_type.value.icon }}\"></iconify-icon>\n    {% endif %}\n    {{ tags.device_type.value.name }}\n  </div>\n{% endif %}\n{% if tags.ecosystems.value %}\n  <div class=\"ecosystems\">\n    <span>Works With:</span>\n    <ul>\n      {% assign ecosystems = tags.ecosystems.value %}\n      {% for ecosystem in ecosystems %}\n        <li>\n          <div class=\"ecosystem\">\n            {% if ecosystem.icon %}\n              {{ ecosystem.icon | image_url: width: 30 | image_tag }}\n            {% endif %}\n            <a href=\"{{ ecosystem.page }}\" target=\"_blank\">{{ ecosystem.name }}</a>\n          </div>\n        </li>\n      {% endfor %}\n    </ul>\n  </div>\n{% endif %}\n{% if tags.sensors.value %}\n  <div class=\"sensors\">\n    <span>Sensors:</span>\n    <ul>\n      {% assign sensors = tags.sensors.value %}\n      {% for sensor in sensors %}\n        <li>\n          <div class=\"sensor\">\n            {% if sensor.icon %}\n              <iconify-icon icon=\"mdi:{{ sensor.icon }}\"></iconify-icon>\n            {% endif %}\n            {{ sensor.name }}\n          </div>\n        </li>\n      {% endfor %}\n    </ul>\n  </div>\n{% endif %}"
           }
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
-        "collapsible_tab_iV9bt6": {
-          "type": "collapsible_tab",
+        "icon_with_text_QMQNyD": {
+          "type": "icon-with-text",
           "settings": {
-            "heading": "Shipping",
-            "icon": "truck",
-            "content": "<p><strong>Standard Shipping<\/strong>: Estimated 5-15 business days<\/p><ul><li>Free for orders over £50<\/li><li>£4.99 for orders under £50<\/li><\/ul>",
-            "page": ""
+            "layout": "vertical",
+            "icon_1": "truck",
+            "heading_1": "<strong>Shipping Time</strong>: Estimated 5-15 business days",
+            "icon_2": "box",
+            "heading_2": "<strong>Shipping Cost:</strong> £4.99 for orders under £50",
+            "icon_3": "check_mark",
+            "heading_3": ""
           }
         }
       },
@@ -86,11 +85,11 @@
         "buy_buttons",
         "custom_liquid_rBc83K",
         "description",
-        "collapsible_tab_iV9bt6"
+        "icon_with_text_QMQNyD"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "cover",

@@ -15,12 +15,11 @@
         "slide_n8FVUk": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DALL_E_2024-04-30_16.27.02_-_A_modern_and_sleek_living_room_with_advanced_smart_home_technology_integrated_seamlessly._The_room_features_a_stylish_sofa_a_smart_coffee_table_with.webp",
             "heading": "Welcome to Smarter Living",
             "heading_size": "h1",
             "subheading": "Discover privacy-focused smart home solutions that put you in control.",
             "button_label": "Explore Our Products",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
@@ -33,12 +32,11 @@
         "slide_jjRcmi": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DALL_E_2024-04-30_16.26.11_-_A_modern_and_sleek_living_room_with_advanced_smart_home_technology_integrated_seamlessly._The_room_features_a_stylish_sofa_a_smart_coffee_table_with.webp",
             "heading": "Your Privacy, Our Priority",
             "heading_size": "h1",
             "subheading": "Seamlessly integrate locally controlled devices for a secure smart home experience.",
             "button_label": "Learn More",
-            "link": "shopify:\/\/pages\/building-a-privacy-focused-smart-home-with-local-control",
+            "link": "shopify://pages/building-a-privacy-focused-smart-home-with-local-control",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
@@ -51,12 +49,11 @@
         "slide_YTFK9c": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stock_Kitchen_1.png",
             "heading": "Our Story",
             "heading_size": "h1",
             "subheading": "A message from the founders, we believe honesty and transparency is the best policy",
             "button_label": "Read More",
-            "link": "shopify:\/\/pages\/from-the-founders",
+            "link": "shopify://pages/from-the-founders",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
@@ -89,31 +86,28 @@
         "column_M7nLP8": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Icon_Totaga_Camera.svg",
-            "title": "<strong>Your Privacy, Our Priority<\/strong>",
-            "text": "<p>Devices that keep your data secured and operations local.<\/p>",
+            "title": "<strong>Your Privacy, Our Priority</strong>",
+            "text": "<p>Devices that keep your data secured and operations local.</p>",
             "link_label": "Learn More",
-            "link": "shopify:\/\/pages\/building-a-privacy-focused-smart-home-with-local-control"
+            "link": "shopify://pages/building-a-privacy-focused-smart-home-with-local-control"
           }
         },
         "column_wATXj7": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Icon_Totaga_Light.svg",
-            "title": "<strong>One-Stop Smart Home Shop<\/strong>",
-            "text": "<p>From basics to advanced, find all your smart home needs in one place.<\/p>",
+            "title": "<strong>One-Stop Smart Home Shop</strong>",
+            "text": "<p>From basics to advanced, find all your smart home needs in one place.</p>",
             "link_label": "Browse",
-            "link": "shopify:\/\/collections"
+            "link": "shopify://collections"
           }
         },
         "column_8FzNtV": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Icon_Totaga_Gear_Slow.svg",
-            "title": "<strong>Easy Start, Advanced Potential<\/strong>",
-            "text": "<p>Products that grow with your comfort level, from plug-and-play to fully customizable.<\/p>",
+            "title": "<strong>Easy Start, Advanced Potential</strong>",
+            "text": "<p>Products that grow with your comfort level, from plug-and-play to fully customizable.</p>",
             "link_label": "Read FAQs",
-            "link": "shopify:\/\/pages\/smart-home-faqs"
+            "link": "shopify://pages/smart-home-faqs"
           }
         }
       },
@@ -139,20 +133,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_richtext_cHypBi": {
-      "type": "featured-richtext",
-      "settings": {
-        "rich_text_content": "<p>Our aim is to equip your home with technology that actually makes your life better without the need for a tech degree. Whether it's your first venture into smart home gear or you're looking to upgrade your setup, we've got your back. We've handpicked a selection of smart home devices that deliver on their promises, because we believe in making tech work for everyone. You won’t find any lofty tech jargon or over-the-top claims here. Just a reliable selection of smart home tech, straightforward support, and a commitment to keeping your data private. Let’s make smart home technology work for you.<\/p>",
-        "heading": "<h1>Tech on Your Terms<\/h1>",
-        "featured_product": "nspanel-pro-smart-home-control-panel",
-        "full_width": false,
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "gap_between": 30,
-        "text_width": 75,
-        "product_card_position": "right"
-      }
-    },
     "image_with_text_EUFrka": {
       "type": "image-with-text",
       "blocks": {
@@ -166,7 +146,7 @@
         "text_FFE7WU": {
           "type": "text",
           "settings": {
-            "text": "<p>We have grown our smart homes alongside Home Assistant as it has developed into the most popular local control smart home solution. We ensure all our smart products work with Home Assistant<\/p>",
+            "text": "<p>We have grown our smart homes alongside Home Assistant as it has developed into the most popular local control smart home solution. We ensure all our smart products work with Home Assistant</p>",
             "text_style": "subtitle"
           }
         },
@@ -174,7 +154,7 @@
           "type": "button",
           "settings": {
             "button_label": "Find Out More About Home Assistant",
-            "button_link": "shopify:\/\/pages\/home-assistant",
+            "button_link": "shopify://pages/home-assistant",
             "button_style_secondary": false
           }
         }
@@ -188,7 +168,6 @@
         ".image-with-text__media {border: none;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Stock_HA_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -291,7 +270,6 @@
   "order": [
     "slideshow_Adgfy8",
     "multicolumn_MGUMgj",
-    "featured_richtext_cHypBi",
     "image_with_text_EUFrka",
     "featured_collection",
     "featured_collection_YCddtT",

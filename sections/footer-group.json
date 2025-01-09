@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -31,7 +31,7 @@
           "type": "text",
           "settings": {
             "heading": "Our mission",
-            "subtext": "<p>At Totaga, we envision a future where living spaces are not just smart but are also secure and private. Our mission is to empower homeowners with innovative technology, enhancing everyday life while upholding the privacy and security every individual deserves. We offer a handpicked selection of smart home technology, tailored for the DIY enthusiast, the privacy-conscious, and all those in between.<\/p>"
+            "subtext": "<p>At Totaga, we envision a future where living spaces are not just smart but are also secure and private. Our mission is to empower homeowners with innovative technology, enhancing everyday life while upholding the privacy and security every individual deserves. We offer a handpicked selection of smart home technology, tailored for the DIY enthusiast, the privacy-conscious, and all those in between.</p>"
           }
         }
       },
@@ -41,7 +41,7 @@
         "footer-2"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
