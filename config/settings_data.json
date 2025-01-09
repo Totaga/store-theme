@@ -160,11 +160,11 @@
         "settings": {
           "background": "#071328",
           "background_gradient": "linear-gradient(180deg, rgba(7, 19, 40, 1), rgba(35, 67, 81, 1) 100%)",
-          "text": "#f0f0f0",
+          "text": "#ffffff",
           "button": "#071328",
-          "button_label": "#e3e7ed",
-          "secondary_button_label": "#f0f0f0",
-          "shadow": "#f0f0f0"
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff"
         }
       },
       "scheme-3": {
