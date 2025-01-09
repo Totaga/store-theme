@@ -45,6 +45,28 @@
   display: flex !important;
 }
 
+/* Dark mode select styles */
+.dark-select {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+}
+
+.dark-select option {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+.select__select {
+  padding-left: 1rem !important;
+}
+
+.shopify-pc__banner__dialog {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  padding: 1rem;
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);

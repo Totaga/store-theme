@@ -5,6 +5,7 @@ const IGNORED_ELEMENTS = ['site-header', 'announcement-bar', 'header-wrapper'];
 
 const LIGHT_THEME = 'color-scheme-1';
 const DARK_THEME = 'color-scheme-2';
+const DARK_SELECT = 'dark-select';
 
 class ThemeToggle extends HTMLElement {
   constructor() {
@@ -71,6 +72,16 @@ class ThemeToggle extends HTMLElement {
     elements.forEach((element) => {
       element.classList.remove(LIGHT_THEME, DARK_THEME);
       element.classList.add(theme === 'dark' ? DARK_THEME : LIGHT_THEME);
+    });
+
+    // Handle select elements specifically
+    const selectElements = document.getElementsByTagName('select');
+    Array.from(selectElements).forEach((select) => {
+      if (theme === 'dark') {
+        select.classList.add(DARK_SELECT);
+      } else {
+        select.classList.remove(DARK_SELECT);
+      }
     });
   }
 
