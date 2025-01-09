@@ -15,6 +15,7 @@
         "slide_n8FVUk": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Stock_Kitchen_1.png",
             "heading": "Welcome to Smarter Living",
             "heading_size": "h1",
             "subheading": "Discover privacy-focused smart home solutions that put you in control.",
@@ -32,6 +33,7 @@
         "slide_jjRcmi": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Stock_Bedroom_1.png",
             "heading": "Your Privacy, Our Priority",
             "heading_size": "h1",
             "subheading": "Seamlessly integrate locally controlled devices for a secure smart home experience.",
@@ -49,6 +51,7 @@
         "slide_YTFK9c": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Stock_Living_Room_2.webp",
             "heading": "Our Story",
             "heading_size": "h1",
             "subheading": "A message from the founders, we believe honesty and transparency is the best policy",
