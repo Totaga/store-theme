@@ -1,0 +1,48 @@
+/* Theme Toggle Button Styles */
+.header__icon--theme {
+  margin-left: 1rem;
+  transition: color var(--duration-short) ease;
+}
+
+/* Ensure .svg-wrapper within theme toggle matches existing header icons */
+.header__icon--theme .svg-wrapper {
+  position: relative; /* To position child icons */
+}
+
+/* Theme Icons (Sun and Moon) */
+.theme-toggle__sun,
+.theme-toggle__moon {
+  fill: currentColor; /* Inherit color from parent */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+/* Initial Visibility */
+.theme-toggle__sun {
+  display: flex !important;
+}
+
+.theme-toggle__moon {
+  display: none !important;
+}
+
+/* Toggle visibility based on theme */
+[data-theme="dark"] .header__icon--theme .theme-toggle__sun {
+  display: none !important;
+}
+
+[data-theme="dark"] .header__icon--theme .theme-toggle__moon {
+  display: flex !important;
+}
+
+/* Dark mode select styles */
+.dark-select {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+}
+
+.dark-select option {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+} 
